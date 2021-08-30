@@ -18,7 +18,9 @@ describe('Second test suite',()=>{
             }
 
         })
-
+        cy.get('.cart-icon > img').click()
+        cy.contains('PROCEED TO CHECKOUT').click()
+        cy.get(':nth-child(14)').click()
        
     })
 })
