@@ -7,6 +7,7 @@ describe('First test suite',()=>{
         cy.get('.product:visible').should('have.length',4  )
         //Psrent child chaining
         cy.get('.products').find('.product').should('have.length',4)
+        
 
        // cy.get('.products').find('.product').eq(0).contains('ADD TO CART').click()
        cy.get('.products').as('pf')
