@@ -1,3 +1,4 @@
+//const { expect } = require("chai")
 
 
 
@@ -22,12 +23,46 @@ describe('4th test suite',()=>{
         })
 
     //Handling child tabs
+    //Option 1 (Option 2 at below)
     cy.get('#opentab').invoke('removeAttr','target').click()
     //Navigating browser controls
     cy.go('back')
     cy.url().should('include','rahul')
 
+    //Option 2
+    cy.get('#opentab').then(function($elem){
+        
+        const url=$elem.prop('href')
+        cy.visit(url)
+        cy.go('back')
     })
+
+      //Handling web tables
+      cy.get('tr td:nth-child(2)').each(($elem,index)=>{
+        const txt=$elem.text()
+        if(txt.includes('Python'))
+        {
+            cy.get('tr td:nth-child(2)').eq(index).next().then(function(price){
+                const price_is=price.text()
+                expect(price_is).to.equal('25')
+            })
+        }
+    })
+
+    //Handling Mouse Hover
+
+    // cy.get('.mouse-hover-content').invoke('show')
+    // cy.contains('Top').click()
+    // cy.url().should('include','top')
+
+    //Forcefully clicking on invisible element
+    cy.contains('Top').click({force:true})
+    cy.url().should('include','top')
+
+    })
+
+
+  
         
         
 })
