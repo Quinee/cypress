@@ -4,14 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": ".\\node_modules\\.bin\\cypress run --headed --browser chrome",
+    "example": "npm run demo -- --spec \"cypress/integration/Practice/*\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^8.3.0"
   },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
   "devDependencies": {
-    "cypress-iframe": "^1.0.1"
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^6.2.2",
+    "multiple-cucumber-html-reporter": "^1.18.0"
   }
 }

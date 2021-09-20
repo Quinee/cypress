@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-09-20T16:23:34.354Z",
+    "end": "2021-09-20T16:24:08.096Z",
+    "duration": 33742,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c26cb555-7f4e-4db2-b2f1-4c8ccaea6ddd",
+      "title": "",
+      "fullFile": "cypress/integration/BDD/ecommerce.feature",
+      "file": "cypress/integration/BDD/ecommerce.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0aca88e0-094b-4f4e-993f-0fceec4fa97e",
+          "title": "End to end Ecommerce validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ecommerce products delivery",
+              "fullTitle": "End to end Ecommerce validation Ecommerce products delivery",
+              "timedOut": null,
+              "duration": 1797,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "TypeError: Cannot read properties of undefined (reading 'productName')",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'productName')\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\BDD\\ecommerce.feature:57:13)\n    at Context.resolveAndRunStepDefinition (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\BDD\\ecommerce.feature:12510:29)\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\BDD\\ecommerce.feature:11831:35)",
+                "diff": null
+              },
+              "uuid": "8b5713a6-8164-4b9d-afe8-f62c9e256421",
+              "parentUUID": "0aca88e0-094b-4f4e-993f-0fceec4fa97e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filling the form to shop",
+              "fullTitle": "End to end Ecommerce validation Filling the form to shop",
+              "timedOut": null,
+              "duration": 7599,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "36704334-7160-4f9d-b6ff-84ebdb7a9e4a",
+              "parentUUID": "0aca88e0-094b-4f4e-993f-0fceec4fa97e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "36704334-7160-4f9d-b6ff-84ebdb7a9e4a"
+          ],
+          "failures": [
+            "8b5713a6-8164-4b9d-afe8-f62c9e256421"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9396,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

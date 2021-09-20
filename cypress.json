@@ -1,1 +1,14 @@
-{}
+{
+  "env": {
+    "url": "https://rahulshettyacademy.com"
+  },
+  
+    "testFiles": "**/*.feature"
+  
+,  
+  "projectId": "n1q7r6",
+  "reporter":"mochawesome",
+  "retries":{
+    "runMode":1
+  }
+}
